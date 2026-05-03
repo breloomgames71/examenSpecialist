@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Portátil",
+    "description": "Un portátil de alto rendimiento para juegos y trabajo.",
+    "price": 999.99,
+    "quantity": 10,
+    "category": "Electrónica",
+    "brand": "MarcaGaming",
+    "expirationDate": "2023-11-20"
+  },
+  {
+    "name": "Teléfono Inteligente",
+    "description": "Último modelo con características de vanguardia.",
+    "price": 699.99,
+    "quantity": 50,
+    "category": "Electrónica",
+    "brand": "MarcaTeléfono",
+    "expirationDate": "2024-08-15"
+  },
+  {
+    "name": "Silla de Oficina",
+    "description": "Silla ergonómica con soporte lumbar.",
+    "price": 149.99,
+    "quantity": 25,
+    "category": "Muebles",
+    "brand": "MarcaConfort",
+    "expirationDate": "2024-09-01"
+  },
+  {
+    "name": "Zapatos para Correr",
+    "description": "Zapatos ligeros para correr a diario.",
+    "price": 79.99,
+    "quantity": 100,
+    "category": "Calzado",
+    "brand": "MarcaDeportiva",
+    "expirationDate": "2024-10-10"
+  },
+  {
+    "name": "Auriculares Inalámbricos",
+    "description": "Auriculares inalámbricos con cancelación de ruido y larga duración de batería.",
+    "price": 199.99,
+    "quantity": 40,
+    "category": "Electrónica",
+    "brand": "MarcaAudio",
+    "expirationDate": "2024-11-20"
+  },
+  {
+    "name": "Tablet Pro",
+    "description": "Tablet profesional con pantalla de alta resolución.",
+    "price": 499.99,
+    "quantity": 30,
+    "category": "Electrónica",
+    "brand": "MarcaTech",
+    "expirationDate": "2025-01-15"
+  },
+  {
+    "name": "Monitor 4K",
+    "description": "Monitor de 27 pulgadas con resolución 4K.",
+    "price": 349.99,
+    "quantity": 20,
+    "category": "Electrónica",
+    "brand": "MarcaDisplay",
+    "expirationDate": "2025-02-20"
+  },
+  {
+    "name": "Teclado Mecánico",
+    "description": "Teclado mecánico RGB con switches personalizables.",
+    "price": 129.99,
+    "quantity": 60,
+    "category": "Electrónica",
+    "brand": "MarcaKeyboard",
+    "expirationDate": "2025-03-10"
+  },
+  {
+    "name": "Ratón Gaming",
+    "description": "Ratón gaming con sensor de alta precisión.",
+    "price": 79.99,
+    "quantity": 80,
+    "category": "Electrónica",
+    "brand": "MarcaMouse",
+    "expirationDate": "2025-04-05"
+  },
+  {
+    "name": "Escritorio Moderno",
+    "description": "Escritorio de madera con diseño moderno.",
+    "price": 299.99,
+    "quantity": 15,
+    "category": "Muebles",
+    "brand": "MarcaFurniture",
+    "expirationDate": "2025-05-12"
+  },
+  {
+    "name": "Lámpara LED",
+    "description": "Lámpara LED con control de intensidad.",
+    "price": 49.99,
+    "quantity": 100,
+    "category": "Iluminación",
+    "brand": "MarcaLight",
+    "expirationDate": "2025-06-18"
+  },
+  {
+    "name": "Camiseta Deportiva",
+    "description": "Camiseta transpirable para actividades deportivas.",
+    "price": 29.99,
+    "quantity": 150,
+    "category": "Ropa",
+    "brand": "MarcaSport",
+    "expirationDate": "2025-07-25"
+  },
+  {
+    "name": "Pantalón Deportivo",
+    "description": "Pantalón cómodo para entrenamiento.",
+    "price": 39.99,
+    "quantity": 120,
+    "category": "Ropa",
+    "brand": "MarcaSport",
+    "expirationDate": "2025-08-30"
+  },
+  {
+    "name": "Mochila Laptop",
+    "description": "Mochila resistente con compartimento para laptop.",
+    "price": 59.99,
+    "quantity": 70,
+    "category": "Accesorios",
+    "brand": "MarcaBag",
+    "expirationDate": "2025-09-10"
+  },
+  {
+    "name": "Cargador USB-C",
+    "description": "Cargador rápido USB-C de 65W.",
+    "price": 34.99,
+    "quantity": 90,
+    "category": "Electrónica",
+    "brand": "MarcaPower",
+    "expirationDate": "2025-10-15"
+  },
+  {
+    "name": "Webcam HD",
+    "description": "Webcam Full HD con micrófono integrado.",
+    "price": 89.99,
+    "quantity": 50,
+    "category": "Electrónica",
+    "brand": "MarcaVideo",
+    "expirationDate": "2025-11-20"
+  },
+  {
+    "name": "Altavoz Bluetooth",
+    "description": "Altavoz portátil con sonido estéreo.",
+    "price": 69.99,
+    "quantity": 65,
+    "category": "Electrónica",
+    "brand": "MarcaSound",
+    "expirationDate": "2025-12-25"
+  },
+  {
+    "name": "Reloj Inteligente",
+    "description": "Smartwatch con monitor de actividad física.",
+    "price": 249.99,
+    "quantity": 35,
+    "category": "Electrónica",
+    "brand": "MarcaWatch",
+    "expirationDate": "2026-01-10"
+  },
+  {
+    "name": "Cámara de Seguridad",
+    "description": "Cámara IP con visión nocturna y detección de movimiento.",
+    "price": 119.99,
+    "quantity": 25,
+    "category": "Electrónica",
+    "brand": "MarcaSecurity",
+    "expirationDate": "2026-02-15"
+  },
+  {
+    "name": "Router WiFi 6",
+    "description": "Router de última generación con WiFi 6.",
+    "price": 179.99,
+    "quantity": 20,
+    "category": "Electrónica",
+    "brand": "MarcaNetwork",
+    "expirationDate": "2026-03-20"
+  }
+]
