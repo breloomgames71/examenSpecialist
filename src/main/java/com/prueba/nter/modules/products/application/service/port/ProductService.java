@@ -1,6 +1,8 @@
 package com.prueba.nter.modules.products.application.service.port;
 
 import com.prueba.nter.modules.products.domain.entity.ProductEntity;
+import com.prueba.nter.modules.products.infrastructure.dto.input.ProductInputDto;
+import com.prueba.nter.modules.products.infrastructure.dto.ouput.ProductOutputDto;
 
 import java.util.List;
 
@@ -13,15 +15,28 @@ public interface ProductService {
      * Retrieves all products
      * @return a list of all ProductEntity
      */
-    List<ProductEntity> getAll();
+    List<ProductOutputDto>  getAll(int pageNumber, int pageSize);
 
     /**
      * Create a new product
-     * @param product the product entity to create
-     * @return the created ProductEntity
+     * @param products the product entity to create
      */
-    ProductEntity create(ProductEntity product);
+    void create(List<ProductInputDto> products);
 
-    //...
+    /**
+     *  Calculates the total of the prices
+     *  from the products passed
+     * @param products
+     * @return
+     */
+    Double calculatePrices(List<ProductInputDto> products);
 
+    /**
+     * Counts the total of products
+     * by the passed category
+     * @param products
+     * @param category
+     * @return
+     */
+    Long countByCategory(List<ProductInputDto> products, String category);
 }
