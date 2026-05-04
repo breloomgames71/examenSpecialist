@@ -35,7 +35,7 @@ public class ProductController {
      * @return
      */
     @GetMapping("/all")
-    public ResponseEntity<List<ProductOutputDto>> returnAllProducts(@RequestParam(defaultValue = "0", required = false) int pageNumber,
+    public ResponseEntity<List<ProductOutputDto>> getAllProducts(@RequestParam(defaultValue = "0", required = false) int pageNumber,
                                                                     @RequestParam(defaultValue = "4", required = false) int pageSize){
         return ResponseEntity.ok(productService.getAll(pageNumber, pageSize));
     }
@@ -71,7 +71,7 @@ public class ProductController {
             return ResponseEntity.badRequest().body(Constants.EMPTY_FILE);
         }
         List<ProductInputDto> products = readProductsFromFile(file);
-        String message = "The total of the passed prices is: " + productService.calculatePrices(products);
+        String message = Constants.PRICE + productService.calculatePrices(products);
         return ResponseEntity.ok(message);
     }
 
@@ -89,7 +89,7 @@ public class ProductController {
             return ResponseEntity.badRequest().body(Constants.EMPTY_FILE);
         }
         List<ProductInputDto> products = readProductsFromFile(file);
-        String message = "The total of products with the category " + category + " is: " + productService.countByCategory(products, category);
+        String message = Constants.TOTAL_PRODUCTS_CATEGORY + category + " is: " + productService.countByCategory(products, category);
         return ResponseEntity.ok(message);
     }
 

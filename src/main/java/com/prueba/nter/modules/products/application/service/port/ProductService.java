@@ -1,6 +1,5 @@
 package com.prueba.nter.modules.products.application.service.port;
 
-import com.prueba.nter.modules.products.domain.entity.ProductEntity;
 import com.prueba.nter.modules.products.infrastructure.dto.input.ProductInputDto;
 import com.prueba.nter.modules.products.infrastructure.dto.ouput.ProductOutputDto;
 

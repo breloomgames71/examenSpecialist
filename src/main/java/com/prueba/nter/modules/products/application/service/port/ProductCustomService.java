@@ -2,6 +2,7 @@ package com.prueba.nter.modules.products.application.service.port;
 
 
 import com.prueba.nter.modules.products.infrastructure.dto.ouput.ProductOutputDto;
+import org.springframework.data.domain.Page;
 
 import java.time.LocalDate;
 import java.util.List;

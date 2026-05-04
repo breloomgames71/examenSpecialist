@@ -3,6 +3,7 @@ package com.prueba.nter.modules.products.infrastructure.controller;
 import com.prueba.nter.modules.products.application.service.port.ProductCustomService;
 import com.prueba.nter.modules.products.infrastructure.dto.ouput.ProductOutputDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,10 +28,10 @@ public class ProductCustomController {
      * and/or name
      * @param category
      * @param name
-     * @return
+     * @return ProductOutputDto
      */
     @GetMapping("/multiple/filter")
-    public ResponseEntity<List<ProductOutputDto>> returnProductsByCategoryAndName(@RequestParam(value = "category", required = false) String category,
+    public ResponseEntity<List<ProductOutputDto>> getProductsByCategoryAndName(@RequestParam(value = "category", required = false) String category,
                                                                                   @RequestParam(value = "name", required = false) String name){
         return ResponseEntity.ok(productCustomService.findProductByCategoryAndOrName(category, name));
     }
@@ -40,10 +41,10 @@ public class ProductCustomController {
      * with a lower price than the
      * passed
      * @param price
-     * @return
+     * @return ProductOutputDto
      */
     @GetMapping("/price")
-    public ResponseEntity<List<ProductOutputDto>> returnProductsByLessPrice(@RequestParam(value = "price") Double price){
+    public ResponseEntity<List<ProductOutputDto>> getProductsByLessPrice(@RequestParam(value = "price") Double price){
         return ResponseEntity.ok(productCustomService.findProductsLessThanPrice(price));
     }
 
@@ -53,10 +54,10 @@ public class ProductCustomController {
      * two dates
      * @param startDate
      * @param endDate
-     * @return
+     * @return ProductOutputDto
      */
     @GetMapping("/date")
-    public ResponseEntity<List<ProductOutputDto>> returnProductsByDate(@RequestParam(value = "startDate") LocalDate startDate,
+    public ResponseEntity<List<ProductOutputDto>> getProductsByDate(@RequestParam(value = "startDate") LocalDate startDate,
                                                                        @RequestParam(value = "endDate") LocalDate endDate){
         return ResponseEntity.ok(productCustomService.findProductsByDate(startDate, endDate));
     }
@@ -66,10 +67,10 @@ public class ProductCustomController {
      * with the category passed and
      * the lowest price
      * @param category
-     * @return
+     * @return ProductOutputDto
      */
     @GetMapping("/category/price")
-    public ResponseEntity<ProductOutputDto> returnProductByCategoryAndLowestPrice(@RequestParam(value = "category") String category){
+    public ResponseEntity<ProductOutputDto> getProductByCategoryAndLowestPrice(@RequestParam(value = "category") String category){
         return ResponseEntity.ok(productCustomService.findProductsByCategoryAndLowestPrice(category));
     }
 
@@ -96,7 +97,7 @@ public class ProductCustomController {
     /**
      * Retrieves products that belong to the oldest users in the system.
      *
-     * @param numberOfUsers number of oldest users to search
+     * @param numberOfUsers number of the oldest users to search
      * @return list of products associated with the oldest users
      */
     @GetMapping("/oldest-users")
@@ -127,7 +128,7 @@ public class ProductCustomController {
      * @return paginated list of products matching the filters
      */
     @GetMapping("/advanced-search")
-    public ResponseEntity<Page<ProductOutputDto>> advancedSearch(
+    public ResponseEntity<Page<ProductOutputDto>> getAdvancedSearch(
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String category,
             @RequestParam(required = false) String brand,

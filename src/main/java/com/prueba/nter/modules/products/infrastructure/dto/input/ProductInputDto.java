@@ -20,5 +20,7 @@ public class ProductInputDto {
     String category;
     String brand;
     Date expirationDate;
+    Long providerId;
+    Long userId;
 
 }

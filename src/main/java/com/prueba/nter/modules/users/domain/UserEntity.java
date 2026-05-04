@@ -27,7 +27,6 @@ public class UserEntity {
     @NotBlank
     private String username;
 
-    @Email
     @NotBlank
     @Column(unique = true)
     private String email;

@@ -1,418 +1,706 @@
 {
-  "info": {
-    "_postman_id": "3ab1e649-77ba-4d1e-9c02-b1ec1e92631d",
-    "name": "Examen SpringBoot Specialist Raul Rodriguez Montavez",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "32733499"
-  },
-  "item": [
-    {
-      "name": "1.1. SaveProducts",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "formdata",
-          "formdata": [
-            {
-              "key": "file",
-              "type": "file",
-              "uuid": "84a86ac1-c72c-4460-b1d0-c0f693b49174",
-              "src": "/C:/Repositorios/raulrmontavez-springboot-specialist/src/main/resources/Products.json"
-            },
-            {
-              "key": "file",
-              "type": "file",
-              "uuid": "ca986395-d740-4d81-87d6-b5153ad91b22",
-              "src": "/C:/Repositorios/raulrmontavez-springboot-specialist/src/main/resources/Wrong.json",
-              "disabled": true
-            },
-            {
-              "key": "file",
-              "type": "file",
-              "uuid": "0e36a16d-bfb1-4c57-b1b8-9aee24a6a761",
-              "src": "/C:/Repositorios/raulrmontavez-springboot-specialist/src/main/resources/Empty.json",
-              "disabled": true
-            }
-          ]
-        },
-        "url": {
-          "raw": "http://localhost:8090/api/v1/web/products/file",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "web",
-            "products",
-            "file"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "1.2. FindAllProducts",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8090/api/v1/web/products/all?pageNumber=0&pageSize=15",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "web",
-            "products",
-            "all"
-          ],
-          "query": [
-            {
-              "key": "pageNumber",
-              "value": "0"
-            },
-            {
-              "key": "pageSize",
-              "value": "15"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "1.3. CountTotalPrice",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "formdata",
-          "formdata": [
-            {
-              "key": "file",
-              "type": "file",
-              "uuid": "84a86ac1-c72c-4460-b1d0-c0f693b49174",
-              "src": "/C:/Repositorios/raulrmontavez-springboot-specialist/src/main/resources/Products.json"
-            }
-          ]
-        },
-        "url": {
-          "raw": "http://localhost:8090/api/v1/web/products/file/price",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "web",
-            "products",
-            "file",
-            "price"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "1.4. CountByCategory",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "formdata",
-          "formdata": [
-            {
-              "key": "file",
-              "type": "file",
-              "uuid": "84a86ac1-c72c-4460-b1d0-c0f693b49174",
-              "src": "/C:/Repositorios/raulrmontavez-springboot-specialist/src/main/resources/Products.json"
-            },
-            {
-              "key": "category",
-              "value": "electrónica",
-              "type": "text",
-              "uuid": "99452c3d-52f2-4f04-aa10-e5ad8f5accfd"
-            }
-          ]
-        },
-        "url": {
-          "raw": "http://localhost:8090/api/v1/web/products/file/category",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "web",
-            "products",
-            "file",
-            "category"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "2.1.1. FindProductByName",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8090/api/v1/query/products/name?name=Portátil",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "query",
-            "products",
-            "name"
-          ],
-          "query": [
-            {
-              "key": "name",
-              "value": "Error",
-              "disabled": true
-            },
-            {
-              "key": "name",
-              "value": "Portátil"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "2.1.2. CountByCategoryQuery",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8090/api/v1/query/products/category?category=Electrónica",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "query",
-            "products",
-            "category"
-          ],
-          "query": [
-            {
-              "key": "category",
-              "value": "Electrónica",
-              "type": "text"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "2.1.3. FindProductByCategoryAndName",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8090/api/v1/query/products/multiple/filter?category=Electrónica&name=Portátil",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "query",
-            "products",
-            "multiple",
-            "filter"
-          ],
-          "query": [
-            {
-              "key": "category",
-              "value": "Electrónica",
-              "type": "text"
-            },
-            {
-              "key": "name",
-              "value": "Portátil"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "2.2.1. FindProductByNameAndOrCategory",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8090/api/v1/custom/products/multiple/filter?category=Electrónica",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "custom",
-            "products",
-            "multiple",
-            "filter"
-          ],
-          "query": [
-            {
-              "key": "category",
-              "value": "Error",
-              "type": "text",
-              "disabled": true
-            },
-            {
-              "key": "name",
-              "value": "Portátil",
-              "disabled": true
-            },
-            {
-              "key": "category",
-              "value": "Electrónica"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "2.2.2. FindProductByLessPrice",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8090/api/v1/custom/products/price?price=90",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "custom",
-            "products",
-            "price"
-          ],
-          "query": [
-            {
-              "key": "price",
-              "value": "2000",
-              "disabled": true
-            },
-            {
-              "key": "price",
-              "value": "90",
-              "type": "text"
-            },
-            {
-              "key": "price",
-              "value": "0",
-              "type": "text",
-              "disabled": true
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "2.2.3. FindProductByExpirationDate",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8090/api/v1/custom/products/date?startDate=2023-11-19&endDate=2024-09-01",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "custom",
-            "products",
-            "date"
-          ],
-          "query": [
-            {
-              "key": "startDate",
-              "value": "2023-11-19"
-            },
-            {
-              "key": "endDate",
-              "value": "2024-09-01",
-              "type": "text"
-            },
-            {
-              "key": "price",
-              "value": "0",
-              "type": "text",
-              "disabled": true
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "2.2.4. FindProductByCategoryAndLowestPrice",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8090/api/v1/custom/products/category/price?category=Electrónica",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8090",
-          "path": [
-            "api",
-            "v1",
-            "custom",
-            "products",
-            "category",
-            "price"
-          ],
-          "query": [
-            {
-              "key": "category",
-              "value": "Electrónica"
-            }
-          ]
-        }
-      },
-      "response": []
-    }
-  ]
+	"info": {
+		"_postman_id": "7cb65b69-9346-4079-bcc3-72e9f4829feb",
+		"name": "Examen SpringBoot Specialist RaulRMontavez",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28462053"
+	},
+	"item": [
+		{
+			"name": "1. Spring Web - Products",
+			"item": [
+				{
+					"name": "1.1 Save Products From File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/Proyectos/Progreso de juegos/JUEGOS/examen specialist/raulrmontavez-springboot-specialist/src/main/resources/Products.json"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/web/products/file",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"web",
+								"products",
+								"file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.2 Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/web/products/all?pageNumber=0&pageSize=20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"web",
+								"products",
+								"all"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.3 Calculate Total Price From File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/Proyectos/Progreso de juegos/JUEGOS/examen specialist/raulrmontavez-springboot-specialist/src/main/resources/Products.json"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/web/products/file/price",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"web",
+								"products",
+								"file",
+								"price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.4 Count Products By Category From File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/Proyectos/Progreso de juegos/JUEGOS/examen specialist/raulrmontavez-springboot-specialist/src/main/resources/Products.json"
+								},
+								{
+									"key": "category",
+									"value": "{{category}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/web/products/file/category",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"web",
+								"products",
+								"file",
+								"category"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "1. Spring Web - Users",
+			"item": [
+				{
+					"name": "1.5 Save Users From File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/Proyectos/Progreso de juegos/JUEGOS/examen specialist/raulrmontavez-springboot-specialist/src/main/resources/Users.json"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/web/users/file",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"web",
+								"users",
+								"file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.6 Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/web/users/all?pageNumber=0&pageSize=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"web",
+								"users",
+								"all"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2.1 Spring Data - Query",
+			"item": [
+				{
+					"name": "2.1.1 Find Product By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/query/products/name?name={{productName}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"query",
+								"products",
+								"name"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{productName}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.1.2 Count Products By Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/query/products/category?category={{category}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"query",
+								"products",
+								"category"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "{{category}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.1.3 Find Product By Category And Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/query/products/multiple/filter?category={{category}}&name={{productName}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"query",
+								"products",
+								"multiple",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "{{category}}"
+								},
+								{
+									"key": "name",
+									"value": "{{productName}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.1.4 Get Product Prices Ordered Asc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/query/products/prices?name={{productName}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"query",
+								"products",
+								"prices"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{productName}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.1.5 Get Cheapest Product By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/query/products/cheapest?name={{productName}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"query",
+								"products",
+								"cheapest"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{productName}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2.2 Spring Data - Criteria API",
+			"item": [
+				{
+					"name": "2.2.1 Find Product By Name And Or Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/custom/products/multiple/filter?category={{category}}&name={{productName}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"custom",
+								"products",
+								"multiple",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "{{category}}"
+								},
+								{
+									"key": "name",
+									"value": "{{productName}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2.2 Find Products Less Than Price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/custom/products/price?price=90",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"custom",
+								"products",
+								"price"
+							],
+							"query": [
+								{
+									"key": "price",
+									"value": "90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2.3 Find Products By Expiration Date Range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/custom/products/date?startDate=2023-11-19&endDate=2026-12-31",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"custom",
+								"products",
+								"date"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2023-11-19"
+								},
+								{
+									"key": "endDate",
+									"value": "2026-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2.4 Find Product By Category And Lowest Price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/custom/products/category/price?category={{category}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"custom",
+								"products",
+								"category",
+								"price"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "{{category}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2.5 Find Products By User Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/custom/products/user?email={{email}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"custom",
+								"products",
+								"user"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "{{email}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2.6 Find Products By User Email With Category And Brand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/custom/products/user?email={{email}}&category={{category}}&brand={{brand}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"custom",
+								"products",
+								"user"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "{{email}}"
+								},
+								{
+									"key": "category",
+									"value": "{{category}}"
+								},
+								{
+									"key": "brand",
+									"value": "{{brand}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2.7 Find Products From Oldest Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/custom/products/oldest-users?numberOfUsers=3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"custom",
+								"products",
+								"oldest-users"
+							],
+							"query": [
+								{
+									"key": "numberOfUsers",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2.8 Advanced Search - Full Filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/custom/products/advanced-search?name={{productName}}&category={{category}}&brand={{brand}}&minPrice=10&maxPrice=2000&startDate=2023-01-01&endDate=2026-12-31&providerId={{providerId}}&page=0&size=5&sortBy=price&direction=asc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"custom",
+								"products",
+								"advanced-search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{productName}}"
+								},
+								{
+									"key": "category",
+									"value": "{{category}}"
+								},
+								{
+									"key": "brand",
+									"value": "{{brand}}"
+								},
+								{
+									"key": "minPrice",
+									"value": "10"
+								},
+								{
+									"key": "maxPrice",
+									"value": "2000"
+								},
+								{
+									"key": "startDate",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2026-12-31"
+								},
+								{
+									"key": "providerId",
+									"value": "{{providerId}}"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sortBy",
+									"value": "price"
+								},
+								{
+									"key": "direction",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2.9 Advanced Search - Pagination Only",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/custom/products/advanced-search?page=0&size=10&sortBy=id&direction=desc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"custom",
+								"products",
+								"advanced-search"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "id"
+								},
+								{
+									"key": "direction",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8090"
+		},
+		{
+			"key": "productName",
+			"value": "Portátil"
+		},
+		{
+			"key": "category",
+			"value": "Electrónica"
+		},
+		{
+			"key": "brand",
+			"value": "MarcaTech"
+		},
+		{
+			"key": "email",
+			"value": "user1@email.com"
+		},
+		{
+			"key": "providerId",
+			"value": "1"
+		}
+	]
 }

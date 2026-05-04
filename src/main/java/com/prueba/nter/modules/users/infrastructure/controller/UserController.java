@@ -1,14 +1,32 @@
 package com.prueba.nter.modules.users.infrastructure.controller;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.prueba.nter.constants.Constants;
 import com.prueba.nter.error.exception.FileReadingException;
+import com.prueba.nter.modules.users.application.service.port.UserService;
 import com.prueba.nter.modules.users.infrastructure.dto.input.UserInputDto;
 import com.prueba.nter.modules.users.infrastructure.dto.ouput.UserOutputDto;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.InputStream;
 import java.util.List;
 
+/**
+ * REST controller for managing Products.
+ */
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/api/v1/web/users")
 public class UserController {
+
+    private final ObjectMapper objectMapper;
+    private final UserService userService;
 
     /**
      * Method to retrieve a list
@@ -18,9 +36,9 @@ public class UserController {
      * @return
      */
     @GetMapping("/all")
-    public ResponseEntity<List<UserOutputDto>> returnAllUsers(@RequestParam(defaultValue = "0", required = false) int pageNumber,
+    public ResponseEntity<List<UserOutputDto>> getAllUsers(@RequestParam(defaultValue = "0", required = false) int pageNumber,
                                                               @RequestParam(defaultValue = "4", required = false) int pageSize){
-        return ResponseEntity.ok(productService.getAll(pageNumber, pageSize));
+        return ResponseEntity.ok(userService.getAll(pageNumber, pageSize));
     }
 
     /**
@@ -35,8 +53,8 @@ public class UserController {
         if (file.isEmpty()){
             return ResponseEntity.badRequest().body(Constants.EMPTY_FILE);
         }
-        List<ProductInputDto> products = readProductsFromFile(file);
-        productService.create(products);
+        List<UserInputDto> products = readUsersFromFile(file);
+        userService.create(products);
         return ResponseEntity.ok().build();
     }
 
